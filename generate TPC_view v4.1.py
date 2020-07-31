@@ -375,24 +375,15 @@ for int_pmt_id in list_pmts:
     dict_array_pmts[str_array_name].append(int_pmt_id)
     
     
-    if "coords" in dict_pmt_info:
-        # if "pmt" in dict_pmt_info["coords"]:
-            # dict_array_float_x[str_array_name].append(dict_pmt_info["coords"]["pmt"][0])
-            # dict_array_float_y[str_array_name].append(dict_pmt_info["coords"]["pmt"][1])
-        # else:
-            dict_array_float_x[str_array_name].append(dict_pmt_info["coords"][0])
-            dict_array_float_y[str_array_name].append(dict_pmt_info["coords"][1])
+    if int_pmt_id < 500:
+        dict_array_float_x[str_array_name].append(dict_pmt_info["coords"][0])
+        dict_array_float_y[str_array_name].append(dict_pmt_info["coords"][1])
             
-    elif int_pmt_id >= 500:
-        # if "pmt" in dict_cable_map[int_pmt_id-500]["coords"]:
-            # dict_array_float_x[str_array_name].append(dict_cable_map[int_pmt_id-500]["coords"]["pmt"][0])
-            # dict_array_float_y[str_array_name].append(dict_cable_map[int_pmt_id-500]["coords"]["pmt"][1])
-            # dict_cable_map[int_pmt_id]["coords"] = dict_cable_map[int_pmt_id-500]["coords"]["pmt"]
-        # else:
-            dict_array_float_x[str_array_name].append(dict_cable_map[int_pmt_id-500]["coords"][0])
-            dict_array_float_y[str_array_name].append(dict_cable_map[int_pmt_id-500]["coords"][1])
-            dict_cable_map[int_pmt_id]["coords"] = dict_cable_map[int_pmt_id-500]["coords"]
-            
+    else:
+        dict_array_float_x[str_array_name].append(dict_cable_map[int_pmt_id-500]["coords"][0])
+        dict_array_float_y[str_array_name].append(dict_cable_map[int_pmt_id-500]["coords"][1])
+        dict_cable_map[int_pmt_id]["coords"] = dict_cable_map[int_pmt_id-500]["coords"]
+        
     # add info to dict_cable_map
     
     dict_cable_map[int_pmt_id]["opt_crate"]   = str_opt_crate
