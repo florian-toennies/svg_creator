@@ -1,0 +1,288 @@
+<svg
+    id="svg1"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 %%svg_layout_total_width%% %%svg_layout_total_height%%"
+    svg_maker_version="%%svg_maker_version%%"
+>
+    <style>
+       
+       circle{
+            fill:
+                none;
+            stroke:
+                black;
+            stroke-width:
+                1;
+        }
+        
+        .infotext{
+            font-size:
+                .6em;
+            
+        }
+        
+        
+        .pmt_text{
+            pointer-events:
+                none;
+            font-size:
+                .3em;
+            dominant-baseline:
+                middle;
+            text-anchor:
+                middle;
+        }
+        
+        .pmt_text_info{
+            font-size:
+                .2em;
+        }
+        
+        .pmt{
+            fill:
+                lightgrey;
+            stroke:
+                grey;
+            stroke-width:
+                .2;
+        }
+
+        .pmt:hover,
+        .pmt:focus{
+            stroke-width:
+                1;
+            stroke:
+                blue;
+        }
+        
+        text{
+            alignment-baseline:
+                central;
+            text-anchor:
+                middle;
+            font-family:
+                Verdana, Helvetica, Arial, sans-serif;
+        }
+        .text_info_large{
+            font-size:
+                .75em;
+            text-anchor:
+                start;
+        }
+        .text_info_small{
+           font-size:
+                .5em;
+            text-anchor:
+                start;
+        }
+        .text_info_small_right{
+           font-size:
+                .4em;
+            text-anchor:
+                end;
+        }
+        .legend{
+            font-size:
+                .4em;
+            text-anchor:
+                start;
+        }
+        .smaller{
+            font-size:
+                .4em;
+        }
+        .right{
+            text-anchor:
+                end;
+        }
+        
+        text.hidden {
+            display:
+                none;
+        }
+        g:hover .hidden {
+            display:
+                block;
+        }
+        .opt, .vme, .amp, .array_HE{
+            visibility: hidden;
+        }
+        
+        .modifiable{
+            cursor:
+                pointer;
+        }
+        
+        rect{
+            fill:
+                none;
+            stroke:
+                black;
+        }
+        
+        .layout{
+            fill:
+                none;
+            stroke:
+                none;
+            
+        }
+        .slot_line{
+            stroke:
+                black;
+            stroke-width:
+                .5;
+        }
+        
+    </style>
+    
+    
+    
+    
+    // layout of the all the blocks
+    
+    // header
+    <rect
+        class="layout"
+        x="%%svg_coord_header_x%%"
+        y="%%svg_coord_header_y%%"
+        width="%%svg_coord_header_width%%"
+        height="%%svg_coord_header_height%%"
+    />
+    
+    // drawign area
+    <rect
+        class="layout"
+        x="%%svg_coord_draw_x%%"
+        y="%%svg_coord_draw_y%%"
+        width="%%svg_coord_draw_width%%"
+        height="%%svg_coord_draw_height%%"
+    />
+    
+    // footer
+    <rect
+        class="layout"
+        x="%%svg_coord_footer_x%%"
+        y="%%svg_coord_footer_y%%"
+        width="%%svg_coord_footer_width%%"
+        height="%%svg_coord_footer_height%%"
+    />
+    
+    // legend
+    <rect
+        class="layout"
+        x="%%svg_coord_legend_x%%"
+        y="%%svg_coord_legend_y%%"
+        width="%%svg_coord_legend_width%%"
+        height="%%svg_coord_legend_height%%"
+    />
+    
+    
+    
+    
+    // LEGEND
+    // color gradient for legend
+    <linearGradient id="gradiendtLegend" x1="0%" y1="100%" x2="0%" y2="0%">
+%%svg_gradient_stops%%
+    </linearGradient>
+
+    <rect
+        x="%%svg_coord_legend_bar_x%%"
+        y="%%svg_coord_legend_bar_y%%"
+        width="%%svg_coord_legend_bar_width%%"
+        height="%%svg_coord_legend_bar_height%%"
+        style="fill:url(#gradiendtLegend)"
+    />
+
+    <text id="str_legend_unit"
+        class="legend"
+        x="%%svg_coord_legend_unit_x%%"
+        y="%%svg_coord_legend_unit_y%%"
+    >datarate / kB/s</text>
+
+    <text id="str_legend_100"
+        class="legend modifiable"
+        x="%%svg_coord_legend_text_x%%"
+        y="%%svg_coord_legend_text_y100%%"
+    >100</text>
+    
+    <text id="str_legend_075"
+        class="legend"
+        x="%%svg_coord_legend_text_x%%"
+        y="%%svg_coord_legend_text_y075%%"
+    > 75</text>
+    
+    <text id="str_legend_050"
+        class="legend"
+        x="%%svg_coord_legend_text_x%%"
+        y="%%svg_coord_legend_text_y050%%"
+    > 50</text>
+    
+    <text id="str_legend_025"
+        class="legend"
+        x="%%svg_coord_legend_text_x%%"
+        y="%%svg_coord_legend_text_y025%%"
+    > 25</text>
+    
+    <text id="str_legend_000"
+        class="legend modifiable"
+        x="%%svg_coord_legend_text_x%%"
+        y="%%svg_coord_legend_text_y000%%"
+    >  0</text>
+    
+    <text id="str_legend_min"
+        class="legend smaller"
+        x="%%svg_layout_legend_text_x_tot%%"
+        y="%%svg_layout_legend_text_y_min%%"
+    >min: 0000 kb/s</text>'
+    
+    <text id="str_legend_max"
+        class="legend smaller"
+        x="%%svg_layout_legend_text_x_tot%%"
+        y="%%svg_layout_legend_text_y_max%%"
+    >max: 0000 kb/s</text>'
+    
+    <text id="str_legend_tot"
+        class="legend smaller"
+        x="%%svg_layout_legend_text_x_tot%%"
+        y="%%svg_layout_legend_text_y_tot%%"
+    >total: 0000 kb/s</text>'
+    
+    
+    // add reader texts here
+    <text id="str_reader_time_1"
+        class="legend smaller right"
+        x="%%svg_coord_reader_x%%"
+        y="%%svg_coord_pmt_meta_y1%%"
+    >reader1: no data</text>'
+    
+    <text id="str_reader_time_2"
+        class="legend smaller right"
+        x="%%svg_coord_reader_x%%"
+        y="%%svg_coord_pmt_meta_y2%%"
+    >reader2: no data</text>'
+    
+    <text id="str_reader_time_3"
+        class="legend smaller right"
+        x="%%svg_coord_reader_x%%"
+        y="%%svg_coord_pmt_meta_y3%%"
+    >reader3: no data</text>'
+    
+    <text id="str_reader_time_4"
+        class="legend smaller right"
+        x="%%svg_coord_reader_x%%"
+        y="%%svg_coord_pmt_meta_y4%%"
+    >svg loaded</text>'
+    
+    
+    
+
+//add header here
+%%CONTENT_HEADER%%
+
+//add pmts here
+%%CONTENT_PMTS%%
+
+
+</svg>
+

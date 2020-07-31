@@ -1,0 +1,231 @@
+
+<svg id="svg2"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 %%svg_viewport_history_total_width%% %%svg_viewport_history_total_height%%"
+    svg_maker_version="%%svg_maker_version%%"
+>
+    <style>
+        text{
+            font-family:
+                Verdana, Helvetica, Arial, sans-serif;
+        }
+        
+        .grid{
+            stroke:
+                darkgrey;
+            stroke-width:
+                .5;
+        }
+        
+        text.dataline, polyline.dataline{
+            cursor:
+                pointer;
+        }
+        g:hover text.dataline, g:hover polyline.dataline{
+            font-weight:
+                bold;
+            stroke-width:
+                2;
+        }
+        
+       .border, .axis{
+            fill:
+                none;
+            stroke:
+                black;
+            stroke-width:
+                1;
+       }
+       
+       .time{
+            font-size: .75em;
+            dominant-baseline:
+                middle;
+            text-anchor:
+                start;
+       }
+       
+       .pmtlabel{
+            font-size: .75em;
+            alignment-baseline:
+                baseline;
+            text-anchor:
+                end;
+       }
+       
+       .axis_y{
+            font-size: .5em;
+            dominant-baseline:
+                middle;
+            text-anchor:
+                end;
+       }
+       
+       .axis_x{
+            font-size: .5em;
+            dominant-baseline:
+                hanging;
+            text-anchor:
+                middle;
+       }
+       .dataline{
+            alignment-baseline:
+                hanging;
+       }
+    </style>
+    
+    // y-axis
+    <line
+        x1="%%svg_coord_history_axis_x_left%%"
+        x2="%%svg_coord_history_axis_x_left%%"
+        y1="%%svg_coord_history_axis_y_bottom%%"
+        y2="%%svg_coord_history_axis_y_top%%"
+        class="axis"
+    />
+    <line
+        x1="%%svg_coord_history_label_025_xaxis%%"
+        x2="%%svg_coord_history_label_025_xaxis%%"
+        y1="%%svg_coord_history_axis_y_bottom%%"
+        y2="%%svg_coord_history_axis_y_top%%"
+        class="grid"
+    />
+    <line
+        x1="%%svg_coord_history_label_050_xaxis%%"
+        x2="%%svg_coord_history_label_050_xaxis%%"
+        y1="%%svg_coord_history_axis_y_bottom%%"
+        y2="%%svg_coord_history_axis_y_top%%"
+        class="grid"
+    />
+    <line
+        x1="%%svg_coord_history_label_075_xaxis%%"
+        x2="%%svg_coord_history_label_075_xaxis%%"
+        y1="%%svg_coord_history_axis_y_bottom%%"
+        y2="%%svg_coord_history_axis_y_top%%"
+        class="grid"
+    />
+    <line
+        x1="%%svg_coord_history_label_100_xaxis%%"
+        x2="%%svg_coord_history_label_100_xaxis%%"
+        y1="%%svg_coord_history_axis_y_bottom%%"
+        y2="%%svg_coord_history_axis_y_top%%"
+        class="grid"
+    />
+    
+    // x-axis
+    <line
+        x1="%%svg_coord_history_axis_x_left%%"
+        x2="%%svg_coord_history_axis_x_right%%"
+        y1="%%svg_coord_history_axis_y_bottom%%"
+        y2="%%svg_coord_history_axis_y_bottom%%"
+        class="axis"
+    />
+    <line
+        x1="%%svg_coord_history_axis_x_left%%"
+        x2="%%svg_coord_history_axis_x_right%%"
+        y1="%%svg_coord_history_label_025_yaxis%%"
+        y2="%%svg_coord_history_label_025_yaxis%%"
+        class="grid"
+    />
+    <line
+        x1="%%svg_coord_history_axis_x_left%%"
+        x2="%%svg_coord_history_axis_x_right%%"
+        y1="%%svg_coord_history_label_050_yaxis%%"
+        y2="%%svg_coord_history_label_050_yaxis%%"
+        class="grid"
+    />
+    <line
+        x1="%%svg_coord_history_axis_x_left%%"
+        x2="%%svg_coord_history_axis_x_right%%"
+        y1="%%svg_coord_history_label_075_yaxis%%"
+        y2="%%svg_coord_history_label_075_yaxis%%"
+        class="grid"
+    />
+    <line
+        x1="%%svg_coord_history_axis_x_left%%"
+        x2="%%svg_coord_history_axis_x_right%%"
+        y1="%%svg_coord_history_label_100_yaxis%%"
+        y2="%%svg_coord_history_label_100_yaxis%%"
+        class="grid"
+    />
+    
+    
+    <text
+        id="pmtlabel"
+        x="%%svg_coord_history_pmt_label_x%%"
+        y="%%svg_coord_history_pmt_label_y%%"
+        class="pmtlabel"
+    >PMT</text>
+    
+    <text
+        x="%%svg_coord_history_label_x_yaxis%%"
+        y="%%svg_coord_history_rate_label_y%%"
+        class="axis_y"
+    >datarate</text>
+    
+    <text
+        x="%%svg_coord_history_label_x_yaxis%%"
+        y="%%svg_coord_history_label_100_yaxis%%"
+        id="str_y_100"
+        class="axis_y"
+    >100 kB/s</text>
+    
+    <text
+        x="%%svg_coord_history_label_x_yaxis%%"
+        y="%%svg_coord_history_label_050_yaxis%%"
+        id="str_y_050"
+        class="axis_y"
+    >50 kB/s</text>
+    
+    <text
+        x="%%svg_coord_history_label_x_yaxis%%"
+        y="%%svg_coord_history_label_000_yaxis%%"
+        id="str_y_000"
+        class="axis_y"
+    >0 kB/s</text>
+    
+    
+    
+    <text
+        x="%%svg_coord_history_label_050_xaxis%%"
+        y="%%svg_coord_history_label_xaxis%%"
+        id="time_id"
+        class="axis_x"
+    >time since start</text>
+    <text
+        x="%%svg_coord_history_label_000_xaxis%%"
+        y="%%svg_coord_history_label_y_xaxis%%"
+        id="str_x_000"
+        class="axis_x"
+    >0 s</text>
+        
+    <text
+        x="%%svg_coord_history_label_025_xaxis%%"
+        y="%%svg_coord_history_label_y_xaxis%%"
+        id="str_x_025"
+        class="axis_x"
+    >1 s</text>
+        
+    <text
+        x="%%svg_coord_history_label_050_xaxis%%"
+        y="%%svg_coord_history_label_y_xaxis%%"
+        id="str_x_050"
+        class="axis_x"
+    >2 s</text>
+        
+    <text
+        x="%%svg_coord_history_label_075_xaxis%%"
+        y="%%svg_coord_history_label_y_xaxis%%"
+        id="str_x_075"
+        class="axis_x"
+    >3 s</text>
+        
+    <text
+        x="%%svg_coord_history_label_100_xaxis%%"
+        y="%%svg_coord_history_label_y_xaxis%%"
+        id="str_x_100"
+        class="axis_x"
+    >4 s</text>
+
+
+
+</svg>
