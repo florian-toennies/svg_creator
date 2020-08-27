@@ -254,25 +254,25 @@
         class="legend smaller right"
         x="%%svg_coord_reader_x%%"
         y="%%svg_coord_pmt_meta_y1%%"
-    >reader1: no data</text>'
+    ></text>'
     
     <text id="str_reader_time_2"
         class="legend smaller right"
         x="%%svg_coord_reader_x%%"
         y="%%svg_coord_pmt_meta_y2%%"
-    >reader2: no data</text>'
+    ></text>'
     
     <text id="str_reader_time_3"
         class="legend smaller right"
         x="%%svg_coord_reader_x%%"
         y="%%svg_coord_pmt_meta_y3%%"
-    >reader3: no data</text>'
+    ></text>'
     
     <text id="str_reader_time_4"
         class="legend smaller right"
         x="%%svg_coord_reader_x%%"
         y="%%svg_coord_pmt_meta_y4%%"
-    >svg loaded</text>'
+    >Version: %%svg_maker_version%%</text>'
     
     
     
